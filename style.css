@@ -1,0 +1,177 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .slider-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 500px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .slide-content {
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+
+        .slide-number {
+            font-size: 6em;
+            font-weight: bold;
+            opacity: 0.3;
+            margin-bottom: 20px;
+        }
+
+        .slide-title {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .slide-description {
+            font-size: 1.2em;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Different gradient for each slide */
+        .slide:nth-child(1) {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .slide:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+
+        .slide:nth-child(3) {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+        }
+
+        .slide:nth-child(4) {
+            background: linear-gradient(135deg, #43e97b, #38f9d7);
+        }
+
+        .slide:nth-child(5) {
+            background: linear-gradient(135deg, #fa709a, #fee140);
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            color: #333;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .nav-button:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .prev {
+            left: 20px;
+        }
+
+        .next {
+            right: 20px;
+        }
+
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: #667eea;
+            transform: scale(1.3);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .control-btn {
+            padding: 10px 25px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .control-btn:hover {
+            background: #5568d3;
+        }
+
+        .control-btn.active {
+            background: #2ecc71;
+        }
