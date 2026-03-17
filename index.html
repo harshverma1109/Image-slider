@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="slider-container">
+        <h1>🎨 Image Slider</h1>
+        
+        <div class="slider">
+            <button class="nav-button prev" onclick="changeSlide(-1)">❮</button>
+            <button class="nav-button next" onclick="changeSlide(1)">❯</button>
+            
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-number">01</div>
+                        <div class="slide-title">Welcome to our Gallery</div>
+                        <div class="slide-description">Explore amazing visual content with smooth transitions and intuitive controls</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-number">02</div>
+                        <div class="slide-title">Beautiful Design</div>
+                        <div class="slide-description">Experience elegant animations and modern aesthetics</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-number">03</div>
+                        <div class="slide-title">Easy Navigation</div>
+                        <div class="slide-description">Use arrow keys, buttons, or dots to navigate through slides</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-number">04</div>
+                        <div class="slide-title">Auto Play Feature</div>
+                        <div class="slide-description">Sit back and enjoy automatic slide transitions</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <div class="slide-number">05</div>
+                        <div class="slide-title">Responsive Layout</div>
+                        <div class="slide-description">Works perfectly on all devices and screen sizes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dots-container" id="dotsContainer"></div>
+        
+        <div class="controls">
+            <button class="control-btn active" id="autoplayBtn" onclick="toggleAutoplay()">
+                ▶️ Auto Play ON
+            </button>
+        </div>
+    </div>
+<script src="script.js" defer></script>
+</body>
+</html>
